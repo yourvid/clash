@@ -132,7 +132,6 @@ proxy-groups:
   - {name: Apple, <<: *default}
   - {name: Microsoft, <<: *default}
   - {name: Google, <<: *default}
-  - {name: Test, <<: *default}
   - {name: Block, <<: *default}
   - {name: 国外, <<: *default}
   - {name: 国内, <<: *default}
@@ -309,7 +308,6 @@ proxy-groups:
 # ========================
 rules:
   - RULE-SET,MY-DIRECT / Domain,国内
-  - RULE-SET,TEST / Domain,Test
   - RULE-SET,Block / Domain,Block  
   - RULE-SET,ChatGPT / Domain,ChatGPT
   - RULE-SET,Claude / Domain,Claude
@@ -362,7 +360,6 @@ rule-anchor:
 
 rule-providers:
   MY-DIRECT / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/yourvid/clash/refs/heads/main/Direct.list"}
-  TEST / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Check.list"}
   ChatGPT / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
   Claude / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.list"}
   Meta AI / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/MetaAi.list"}
@@ -410,5 +407,6 @@ rule-providers:
   Google / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"}  
   Google / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"}
 # GateFireWall / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/gfw.mrs"}
+
 
 
