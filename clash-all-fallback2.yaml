@@ -155,48 +155,48 @@ default: &default
 # 规则引擎（rules）
 # ========================
 rules:
-  - RULE-SET,MY-DIRECT / Domain,国内
-  - RULE-SET,Block / Domain,Block  
-  - RULE-SET,ChatGPT / Domain,ChatGPT
-  - RULE-SET,Claude / Domain,Claude
-  - RULE-SET,Meta AI / Domain,Meta AI
-  - RULE-SET,Perplexity / Domain,Perplexity
-  - RULE-SET,GitHub / Domain,GitHub
-  - RULE-SET,Telegram / Domain,Telegram
-  - RULE-SET,Telegram / IP,Telegram,no-resolve
-  - RULE-SET,Twitter / Domain,Twitter(X)
-  - RULE-SET,WhatsApp / Domain,WhatsApp
-  - RULE-SET,Facebook / Domain,Facebook
-  - RULE-SET,Amazon / Domain,Amazon
-  - RULE-SET,Apple / Domain,Apple
-  - RULE-SET,Apple-CN / Domain,Apple  
-  - RULE-SET,Microsoft / Domain,Microsoft
-  - RULE-SET,OKX / Domain,Crypto
-  - RULE-SET,Bybit / Domain,Crypto
-  - RULE-SET,Binance / Domain,Crypto
-  - RULE-SET,Youtube / Domain,YouTube
-  - RULE-SET,TikTok / Domain,TikTok
-  - RULE-SET,Netflix / Domain,Netflix
-  - RULE-SET,Netflix / IP,Netflix,no-resolve
-  - RULE-SET,Disney / Domain,Disney
-  - RULE-SET,HBO / Domain,HBO
-  - RULE-SET,Spotify / Domain,Spotify
-  - RULE-SET,Steam / Domain,Steam
-  - RULE-SET,Epic / Domain,Game
-  - RULE-SET,EA / Domain,Game
-  - RULE-SET,Blizzard / Domain,Game
-  - RULE-SET,UBI / Domain,Game
-  - RULE-SET,PlayStation / Domain,Game
-  - RULE-SET,Nintend / Domain,Game
-  - RULE-SET,Google / Domain,Google
-  - RULE-SET,Google / IP,Google,no-resolve
-  - RULE-SET,Proxy / Domain,国外
-  - RULE-SET,Globe / Domain,国外  
-  - RULE-SET,Direct / Domain,国内
-  - RULE-SET,China / Domain,国内
-  - RULE-SET,China / IP,国内,no-resolve
-  - RULE-SET,Private / Domain,国内
-  - MATCH,其他
+  - RULE-SET,MY-DIRECT / Domain,🇨🇳 国内
+  - RULE-SET,Block / Domain,⛔ Block  
+  - RULE-SET,ChatGPT / Domain,🤖 ChatGPT
+  - RULE-SET,Claude / Domain,🤝 Claude
+  - RULE-SET,Meta AI / Domain,🧠 Meta AI
+  - RULE-SET,Perplexity / Domain,🔍 Perplexity
+  - RULE-SET,GitHub / Domain,🐱 GitHub
+  - RULE-SET,Telegram / Domain,✈️ Telegram
+  - RULE-SET,Telegram / IP,✈️ Telegram,no-resolve
+  - RULE-SET,Twitter / Domain,🐦 Twitter(X)
+  - RULE-SET,WhatsApp / Domain,💬 WhatsApp
+  - RULE-SET,Facebook / Domain,📘 Facebook
+  - RULE-SET,Amazon / Domain,🛒 Amazon
+  - RULE-SET,Apple / Domain,🍎 Apple
+  - RULE-SET,Apple-CN / Domain,🍎 Apple  
+  - RULE-SET,Microsoft / Domain,🪟 Microsoft
+  - RULE-SET,OKX / Domain,🪙 Crypto
+  - RULE-SET,Bybit / Domain,🪙 Crypto
+  - RULE-SET,Binance / Domain,🪙 Crypto
+  - RULE-SET,Youtube / Domain,📺 YouTube
+  - RULE-SET,TikTok / Domain,🎵 TikTok
+  - RULE-SET,Netflix / Domain,🎬 Netflix
+  - RULE-SET,Netflix / IP,🎬 Netflix,no-resolve
+  - RULE-SET,Disney / Domain,🏰 Disney
+  - RULE-SET,HBO / Domain,📼 HBO
+  - RULE-SET,Spotify / Domain,🎧 Spotify
+  - RULE-SET,Steam / Domain,🎮 Steam
+  - RULE-SET,Epic / Domain,🕹️ Game
+  - RULE-SET,EA / Domain,🕹️ Game
+  - RULE-SET,Blizzard / Domain,🕹️ Game
+  - RULE-SET,UBI / Domain,🕹️ Game
+  - RULE-SET,PlayStation / Domain,🕹️ Game
+  - RULE-SET,Nintend / Domain,🕹️ Game
+  - RULE-SET,Google / Domain,🌐 Google
+  - RULE-SET,Google / IP,🌐 Google,no-resolve
+  - RULE-SET,Proxy / Domain,🚀 国外
+  - RULE-SET,Globe / Domain,🚀 国外  
+  - RULE-SET,Direct / Domain,🇨🇳 国内
+  - RULE-SET,China / Domain,🇨🇳 国内
+  - RULE-SET,China / IP,🇨🇳 国内,no-resolve
+  - RULE-SET,Private / Domain,🇨🇳 国内
+  - MATCH,🔄 其他
 
 # ========================
 # 规则集提供者
@@ -255,6 +255,7 @@ rule-providers:
   Google / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"}  
   Google / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"}
 # GateFireWall / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/gfw.mrs"}
+
 
 
 
