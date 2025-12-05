@@ -130,12 +130,12 @@ default: &default
   - {name: 🔄 其他, <<: *default, default: 所有-故转}
 
   # 手动/自动组保留
-  - name: 🧭 所有-手动
+  - name: 所有-手动
     type: select
     include-all: true
     filter: "^((?!(直连|拒绝)).)*$"
 
-  - name: ⚡ 所有-自动
+  - name: 所有-自动
     type: url-test
     include-all: true
     tolerance: 50
@@ -143,7 +143,7 @@ default: &default
     filter: "^((?!(直连|拒绝)).)*$"
 
   # 其他组
-  - name: 🔁 所有-故转
+  - name: 所有-故转
     type: fallback
     interval: 300
     lazy: false
@@ -255,6 +255,7 @@ rule-providers:
   Google / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"}  
   Google / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"}
 # GateFireWall / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/gfw.mrs"}
+
 
 
 
