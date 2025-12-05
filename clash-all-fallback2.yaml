@@ -100,8 +100,7 @@ default: &default
     - 直连
     - 拒绝
 
-
-# 业务分流组（全部默认 = 所有-故转）
+proxy-groups:
   - {name: 🤖 ChatGPT, <<: *default, default: 所有-故转}
   - {name: 🤝 Claude, <<: *default, default: 所有-故转}
   - {name: 🧠 Meta AI, <<: *default, default: 所有-故转}
@@ -255,6 +254,7 @@ rule-providers:
   Google / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"}  
   Google / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"}
 # GateFireWall / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/gfw.mrs"}
+
 
 
 
