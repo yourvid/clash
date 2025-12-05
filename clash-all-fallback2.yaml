@@ -101,51 +101,49 @@ default: &default
     - 拒绝
 
 
-proxy-groups:
-
-  # 业务分流组（全部默认 = 所有-故转）
-  - {name: ChatGPT, <<: *default, default: 所有-故转}
-  - {name: Claude, <<: *default, default: 所有-故转}
-  - {name: Meta AI, <<: *default, default: 所有-故转}
-  - {name: Perplexity, <<: *default, default: 所有-故转}
-  - {name: GitHub, <<: *default, default: 所有-故转}
-  - {name: Telegram, <<: *default, default: 所有-故转}
-  - {name: Twitter(X), <<: *default, default: 所有-故转}
-  - {name: WhatsApp, <<: *default, default: 所有-故转}
-  - {name: Facebook, <<: *default, default: 所有-故转}
-  - {name: Steam, <<: *default, default: 所有-故转}
-  - {name: Game, <<: *default, default: 所有-故转}
-  - {name: YouTube, <<: *default, default: 所有-故转}
-  - {name: TikTok, <<: *default, default: 所有-故转}
-  - {name: Disney, <<: *default, default: 所有-故转}
-  - {name: Netflix, <<: *default, default: 所有-故转}
-  - {name: HBO, <<: *default, default: 所有-故转}
-  - {name: Spotify, <<: *default, default: 所有-故转}
-  - {name: Crypto, <<: *default, default: 所有-故转}
-  - {name: Amazon, <<: *default, default: 所有-故转}
-  - {name: Apple, <<: *default, default: 所有-故转}
-  - {name: Microsoft, <<: *default, default: 所有-故转}
-  - {name: Google, <<: *default, default: 所有-故转}
-  - {name: Block, <<: *default, default: 拒绝}
-  - {name: 国外, <<: *default, default: 所有-故转}
-  - {name: 国内, <<: *default, default: 直连}
-  - {name: 其他, <<: *default, default: 所有-故转}
+# 业务分流组（全部默认 = 所有-故转）
+  - {name: 🤖 ChatGPT, <<: *default, default: 所有-故转}
+  - {name: 🤝 Claude, <<: *default, default: 所有-故转}
+  - {name: 🧠 Meta AI, <<: *default, default: 所有-故转}
+  - {name: 🔍 Perplexity, <<: *default, default: 所有-故转}
+  - {name: 🐱 GitHub, <<: *default, default: 所有-故转}
+  - {name: ✈️ Telegram, <<: *default, default: 所有-故转}
+  - {name: 🐦 Twitter(X), <<: *default, default: 所有-故转}
+  - {name: 💬 WhatsApp, <<: *default, default: 所有-故转}
+  - {name: 📘 Facebook, <<: *default, default: 所有-故转}
+  - {name: 🎮 Steam, <<: *default, default: 所有-故转}
+  - {name: 🕹️ Game, <<: *default, default: 所有-故转}
+  - {name: 📺 YouTube, <<: *default, default: 所有-故转}
+  - {name: 🎵 TikTok, <<: *default, default: 所有-故转}
+  - {name: 🏰 Disney, <<: *default, default: 所有-故转}
+  - {name: 🎬 Netflix, <<: *default, default: 所有-故转}
+  - {name: 📼 HBO, <<: *default, default: 所有-故转}
+  - {name: 🎧 Spotify, <<: *default, default: 所有-故转}
+  - {name: 🪙 Crypto, <<: *default, default: 所有-故转}
+  - {name: 🛒 Amazon, <<: *default, default: 所有-故转}
+  - {name: 🍎 Apple, <<: *default, default: 所有-故转}
+  - {name: 🪟 Microsoft, <<: *default, default: 所有-故转}
+  - {name: 🌐 Google, <<: *default, default: 所有-故转}
+  - {name: ⛔ Block, <<: *default, default: 拒绝}
+  - {name: 🚀 国外, <<: *default, default: 所有-故转}
+  - {name: 🇨🇳 国内, <<: *default, default: 直连}
+  - {name: 🔄 其他, <<: *default, default: 所有-故转}
 
   # 手动/自动组保留
-  - name: 所有-手动
+  - name: 🧭 所有-手动
     type: select
     include-all: true
     filter: "^((?!(直连|拒绝)).)*$"
 
-  - name: 所有-自动
+  - name: ⚡ 所有-自动
     type: url-test
     include-all: true
     tolerance: 50
     interval: 300
     filter: "^((?!(直连|拒绝)).)*$"
 
-   # 其他组
-  - name: 所有-故转
+  # 其他组
+  - name: 🔁 所有-故转
     type: fallback
     interval: 300
     lazy: false
@@ -257,6 +255,7 @@ rule-providers:
   Google / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"}  
   Google / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"}
 # GateFireWall / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/gfw.mrs"}
+
 
 
 
